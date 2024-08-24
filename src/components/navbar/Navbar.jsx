@@ -8,7 +8,7 @@ function Navbar(){
     <nav>
       <div className="left">
         <a href="" className="logo">
-          <img src="/logo.png" alt="" />
+          <img src="/copylogo.png" alt="" />
           <span>AgroVision</span>
         </a>
         <a href="">Home</a>
