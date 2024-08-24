@@ -8,6 +8,9 @@
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+
 
   @include lg{
     // background-color: red;
@@ -20,6 +23,12 @@
   @include sm{
     // background-color: rgb(172, 248, 133);
     max-width: 640px;
+  }
+
+  .content{
+    // background-color: purple;
+    flex: 1;
+    // height: calc(100vh - 100px);
   }
 
 }
