@@ -1,10 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
 import appDbContext from './DB/appDbContext.js';
 
 import authRoutes from './Routes/auth.routes.js';
 import messageRoutes from './Routes/messages.routes.js';
+import postRoutes from './Routes/post.routes.js';
 
 const app = express();
 
@@ -14,9 +18,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+const filename= fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
+
 // Routes
+app.use('/uploads',express.static(path.join(dirname,'Uploads')));
 app.use('/api/auth',authRoutes);
 app.use('/api/messages',messageRoutes);
+app.use('/api/posts',postRoutes);
 
 const PORT = process.env.PORT || 5000;
 

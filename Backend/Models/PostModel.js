@@ -33,7 +33,11 @@ const postSchema = new mongoose.Schema({
     temperature : {
         type: Number
     },
+    area : {
+        type: Number,
+        required: true
 
+    },
 },{
     timestamps:true
 });
