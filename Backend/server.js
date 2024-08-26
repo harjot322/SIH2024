@@ -9,10 +9,17 @@ import appDbContext from './DB/appDbContext.js';
 import authRoutes from './Routes/auth.routes.js';
 import messageRoutes from './Routes/messages.routes.js';
 import postRoutes from './Routes/post.routes.js';
+import geminiRoutes from './Routes/gemini.routes.js';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const app = express();
 
 dotenv.config();
+
+
+
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -27,7 +34,9 @@ app.use('/api/auth',authRoutes);
 app.use('/api/messages',messageRoutes);
 app.use('/api/posts',postRoutes);
 
-const PORT = process.env.PORT || 5000;
+app.use('/api/ai' , geminiRoutes )
+
+const PORT = process.env.PORT;
 
 app.get('/', (req, res) => {
     res.send('Hello World');
