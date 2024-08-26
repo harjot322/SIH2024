@@ -42,15 +42,15 @@ function SinglePage() {
             <div className="feature">
               <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Pet Policy</span>
-                <p>Pets Allowed</p>
+                <span>Animal Prohibition</span>
+                <p>Pesticides Available</p>
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Property Fees</span>
-                <p>Must have 3x the rent in total household income</p>
+                <span>Security Deposit</span>
+                <p>2x times the rent</p>
               </div>
             </div>
           </div>
@@ -62,33 +62,33 @@ function SinglePage() {
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
-              <span>2 beds</span>
+              <span>Open warehouse</span>
             </div>
             <div className="size">
               <img src="/bath.png" alt="" />
-              <span>1 bathroom</span>
+              <span>Water Supply</span>
             </div>
           </div>
-          <p className="title">Nearby Places</p>
+          <p className="title">Nearby Facilities</p>
           <div className="listHorizontal">
             <div className="feature">
               <img src="/school.png" alt="" />
               <div className="featureText">
-                <span>School</span>
-                <p>250m away</p>
+                <span>InHouse Transportation</span>
+                <p>Available</p>
               </div>
             </div>
             <div className="feature">
               <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Bus Stop</span>
-                <p>100m away</p>
+                <span>Refrigerator</span>
+                <p>with custom temperatures</p>
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Restaurant</span>
+                <span>Bank/ATMs</span>
                 <p>200m away</p>
               </div>
             </div>
