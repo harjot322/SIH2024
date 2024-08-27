@@ -81,7 +81,9 @@ export const loginRequest = async (req, res) => {
         
         }
         if(!email.includes("@") || !email.includes(".")){
+            
             return res.status(400).json({status : 400, message : "Invalid Email"})
+        
         }
         const user = await User.findOne({email});
 

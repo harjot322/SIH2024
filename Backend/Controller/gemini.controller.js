@@ -61,7 +61,6 @@ export const plantCare = async (req, res) => {
         const files = [
             
                 
-            
             await uploadToGemini(image, "image/jpeg"),
         ];
 

@@ -1,7 +1,7 @@
 import Navbar from "./components/navbar/Navbar"
 import "./layout.scss"
 import HomePage from "./routes/homePage/homePage"
-
+import { Toaster } from "react-hot-toast";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -31,8 +31,9 @@ function App() {
           element: <ListPage />
         },
         {
-          path: "/:id",
-          element: <SinglePage />
+          path: "/list/:id",
+          element: <SinglePage />,
+
         },
         {
           path: "/profile",
@@ -60,10 +61,13 @@ function App() {
     //   <HomePage/>
     //   </div>
     // </div>
+    <>
+      <RouterProvider router={router} />
+      <Toaster />
+    </>
 
-    <RouterProvider router={router}/>
 
-  );
+      );
 }
 
-export default App
+      export default App

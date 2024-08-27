@@ -4,20 +4,23 @@ import cookieParser from 'cookie-parser';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
+import cors from 'cors';
 import appDbContext from './DB/appDbContext.js';
 
 import authRoutes from './Routes/auth.routes.js';
 import messageRoutes from './Routes/messages.routes.js';
 import postRoutes from './Routes/post.routes.js';
 import geminiRoutes from './Routes/gemini.routes.js';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+
 
 const app = express();
 
 dotenv.config();
 
-
-
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+}));
 
 
 
