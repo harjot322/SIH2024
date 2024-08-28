@@ -48,20 +48,28 @@ export const plantCare = async (req, res) => {
 
     try {
 
-        console.log("Plant Care");
+        
 
         const {promp} =  req.body;
 
         
+        
+        let image;
+        if (req.files && req.files.image && req.files.image.length > 0) {
 
-        const image = req.files.image[0].path;
-        console.log("Image", image);
-
-
-        const files = [
             
-                
+            image = req.files.image[0].path;
+
+        } else {
+            
+            image = 'Uploads/default_img.jpeg';
+
+        }
+
+        const files = [    
+            
             await uploadToGemini(image, "image/jpeg"),
+        
         ];
 
         const chatSession = model.startChat({
