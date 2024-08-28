@@ -16,6 +16,8 @@ import SinglePage from "./routes/singlePage/singlePage";
 import ProfilePage from "./routes/profilePage/profilePage";
 import Register from "./routes/register/register";
 import Login from "./routes/login/login";
+import NewPostPage from "./routes/newPostPage/newPostPage";
+import { singlePageLoader } from "./lib/loaders";
 
 function App() {
 
@@ -40,7 +42,7 @@ function App() {
         {
           path: "/list/:id",
           element: isAuthenticated ? <SinglePage /> : <Navigate to="/login" />,
-
+          loader: singlePageLoader,
         },
         {
           path: "/profile",
@@ -54,7 +56,10 @@ function App() {
           path: "/register",
           element: <Register />,
         },
-
+        {
+          path: "/add",
+          element: <NewPostPage />,
+        },
       ]
     },
   ]);

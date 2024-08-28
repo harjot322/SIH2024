@@ -1,6 +1,7 @@
 import './profilePage.scss';
 import List from '../../components/list/List'
 import Chat from '../../components/chat/Chat'
+import { Link } from 'react-router-dom';
 
 // need to sign in to access this page
 function ProfilePage() {
@@ -29,7 +30,9 @@ function ProfilePage() {
           </div>
           <div className="title">
             <h1>My List</h1>
-            <button>Create New Post</button>
+            <Link to='/add'>
+              <button>Create New Post</button>
+            </Link>
           </div>
           <List />
           <div className="title">

@@ -3,6 +3,8 @@ import Post from '../Models/PostModel.js';
 export const createRequest = async (req, res) => {
 
     try {
+        console.log(req.body);
+
         const { title, description, price , address, state, city , temperature ,area } = req.body;
         
         const userId = req.user._id;
@@ -95,6 +97,8 @@ export const getPosts = async (req, res) => {
 export const getPost = async (req, res) => {
 
     try {
+
+        console.log(req.params.id)
 
         
         const post = await Post.findOne(
