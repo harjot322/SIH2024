@@ -3,6 +3,7 @@ import { useState } from 'react'
 import toast from 'react-hot-toast'
 import {useNavigate} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
+import {login } from '../Context/Slices/UserSlice.js'
 
 
 function useLogin() {
@@ -10,18 +11,22 @@ function useLogin() {
     // const dispatch = useDispatch()
     const [loading , setLoading] = useState(false)
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
-    const login = async (email, password) => {
+    const loginRequest = async (email, password) => {
         try {
 
             setLoading(true)
-            const response = await loginRequest(email, password)
+            const response = await loginRequestApi(email, password)
             console.log(response)
             if(response.status === 200){
                 
-                // dispatch(login(response.userData));
+                dispatch(login(response.userData));
+                
                 toast.success('Login successful')
-                console.log(response.userData)
+                
+                localStorage.setItem('user',JSON.stringify(response.userData));
+
                 navigate('/list');
 
             }else{
@@ -41,7 +46,7 @@ function useLogin() {
         
         }
     }
-    return {login, loading}
+    return {loginRequest, loading}
     
     
 }
@@ -49,13 +54,14 @@ function useLogin() {
 export default useLogin
 
 
-const loginRequest = async (email, password) => {
+const loginRequestApi = async (email, password) => {
     try {
         const response = await fetch('http://localhost:5000/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials : 'include',
             body: JSON.stringify({email, password})
         })
         

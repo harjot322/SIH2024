@@ -2,8 +2,11 @@ import Navbar from "./components/navbar/Navbar"
 import "./layout.scss"
 import HomePage from "./routes/homePage/homePage"
 import { Toaster } from "react-hot-toast";
+import { useSelector } from "react-redux";
 import {
   createBrowserRouter,
+  Link,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 
@@ -15,6 +18,10 @@ import Register from "./routes/register/register";
 import Login from "./routes/login/login";
 
 function App() {
+
+
+
+  const isAuthenticated = useSelector(state => state.users.user)
 
   const router = createBrowserRouter([
     {
@@ -32,12 +39,12 @@ function App() {
         },
         {
           path: "/list/:id",
-          element: <SinglePage />,
+          element: isAuthenticated ? <SinglePage /> : <Navigate to="/login" />,
 
         },
         {
           path: "/profile",
-          element: <ProfilePage />
+          element: isAuthenticated ? <ProfilePage /> : <Navigate to="/login" />
         },
         {
           path: "/login",

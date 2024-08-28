@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
-
-function Navbar(){
+import { useSelector } from "react-redux";
+import useLogout from "../../Hooks/useLogout";
+function Navbar() {
 
   const [open, setOpen] = useState(false);
+  const { logout  , loading} = useLogout();
 
-  const user = true; // changing the signup to profile in profile page.
+  const user = useSelector(state => state.users.user)
+
+
+  const logoutHandler = async () => {
+    await logout();
+  }
+  
 
   return (
     <nav>
@@ -29,24 +37,29 @@ function Navbar(){
             <span>Profile</span>
 
           </Link>
-        </div>) : 
-        (
-        <>
-        <a href="" className="farmer-signup">Farmer?</a>
-        <a href="" className="harvester-signup">Harvester?</a>
-        </>
-        ) 
+          <button className="profile" onClick={logoutHandler}>
+            <span>LogOut</span></button>
+        </div>) :
+          (
+            <>
+              {/* <a href="" className="farmer-signup">Farmer?</a>
+              <a href="" className="harvester-signup">Harvester?</a> */}
+              <Link to="/login" className="farmer-signup">Login</Link>
+              <Link to="/register" className="harvester-signup">Signup</Link>
+            </>
+          )
         }
         <div className="menuIcon">
           <img src="/menu.png" alt="" onClick={() => setOpen(!open)} />
         </div>
         <div className={open ? "menu active" : "menu"}>
-        <a href="">Home</a>
-        <a href="">AgroWiki</a>
-        <a href="">Gareeb</a>
-        <a href="">Contact</a>
-        <a href="">Farmer?</a>
-        <a href="">Harvester?</a>
+
+          <Link to="/">Home</Link>
+          <Link to="/wiki">AgroWiki</Link>
+          <Link to="">Gareeb</Link>
+          <a href="">Farmer?</a>
+          <a href="">Harvester?</a>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </nav>

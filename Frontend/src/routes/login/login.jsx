@@ -8,13 +8,13 @@ function Login() {
 	const [email , setEmail] = useState('')
 	const [password , setPassword] = useState('')
 
-	const {login , loading} = useLogin()
+	const {loginRequest , loading} = useLogin()
 
 	const handleSubmit = async (e) => {
 
 		e.preventDefault();
 
-		await login(email, password);
+		await loginRequest(email, password);
 		
 		
 	}
