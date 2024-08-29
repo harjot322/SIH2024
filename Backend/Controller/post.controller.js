@@ -10,12 +10,15 @@ export const createRequest = async (req, res) => {
         
         const userId = req.user._id;
         
+        
         if(!title || !description || !price || !address || !state || !city || !temperature || !area){
+            console.log(true);
             
             return res.status(400).json({status : 400 , message: "All fields are required"});
             
         }
-        console.log("Request received");
+        
+        
         const image = req.files.image[0].path.replace(/^Uploads\//, '').trim();
         console.log(image);
         if(!image){
@@ -24,18 +27,8 @@ export const createRequest = async (req, res) => {
         
         }
         
-        const post  = await Post.create({
-            title,
-            description,
-            price,
-            creator: userId,
-            image,
-            address,
-            state,
-            city,
-            temperature,
-            area
-        });
+        const post  = await Post.create(req.body);
+        
         if(!post){
         
             return res.status(400).json({status : 400 , message: "Post not created"});
