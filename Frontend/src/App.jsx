@@ -18,6 +18,9 @@ import Register from "./routes/register/register";
 import Login from "./routes/login/login";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 import { listPageLoader, singlePageLoader } from "./lib/loaders";
+import Ask from "./components/ask/Ask";
+import Sidebar from "./components/sidebar/Sidebar";
+import Wiki from "./routes/wiki/Wiki";
 
 function App() {
 
@@ -61,6 +64,10 @@ function App() {
         {
           path: "/add",
           element: <NewPostPage />,
+        },
+        {
+          path: "/wiki",
+          element: <Wiki />,
         },
       ]
     },
