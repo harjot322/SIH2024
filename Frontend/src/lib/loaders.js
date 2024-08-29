@@ -9,7 +9,7 @@ export const singlePageLoader = async ({ request, params }) => {
         'Content-Type': 'application/json',
       },
       credentials: 'include',
-      
+
     });
 
     if (!response.ok) {
@@ -26,13 +26,30 @@ export const singlePageLoader = async ({ request, params }) => {
   }
 };
 
-// export const listPageLoader = async ({ request, params }) => {
-//   const query = request.url.split("?")[1];
-//   const postPromise = apiRequest("/posts?" + query);
-//   return defer({
-//     postResponse: postPromise,
-//   });
-// };
+
+export const listPageLoader = async ({ request }) => {
+  const query = request.url.split("?")[1];
+
+
+  const postPromise = fetch(`http://localhost:5000/api/posts/?${query}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  }).then(response => {
+    if (!response.ok) {
+      // throw new Error(`HTTP error! status: ${response.status}`);
+      toast.error("Error fetching posts: " + response.status);
+    }
+    return response.json();
+  });
+
+  return defer({
+    postResponse: postPromise,
+  });
+};
+
 
 // export const profilePageLoader = async () => {
 //   const postPromise = apiRequest("/users/profilePosts");

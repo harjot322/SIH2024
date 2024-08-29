@@ -23,13 +23,20 @@ function NewPostPage() {
         title: inputs.title,
         price: parseInt(inputs.price),
         address: inputs.address,
+        size: inputs.size,
+        description: inputs.description,
         city: inputs.city,
-        bedroom: parseInt(inputs.bedroom),
-        bathroom: parseInt(inputs.bathroom),
-        type: inputs.type,
-        property: inputs.property,
+        state: inputs.state,
+        transportation: inputs.transportation,
+        pestcontrol: inputs.pestControl,
+        tempcontrol: inputs.tempControl,
+        supply: inputs.supply,
+        shelter: inputs.shelter,
         latitude: inputs.latitude,
         longitude: inputs.longitude,
+        policy: inputs.policy,
+        highway: inputs.highway,
+        bank: inputs.bank,
         images: images,
       }
 
@@ -72,6 +79,11 @@ function NewPostPage() {
                 <input id="address" name="address" type="text" />
               </div>
 
+              <div className="item">
+                <label htmlFor="size">Total Size (sqft)</label>
+                <input min={0} id="size" name="size" type="number" />
+              </div>
+
               <div className="item description">
                 <label htmlFor="desc">Description</label>
                 <ReactQuill theme="snow" onChange={setValue} value={value} />
@@ -83,13 +95,58 @@ function NewPostPage() {
               </div>
 
               <div className="item">
-                <label htmlFor="bedroom">Transportation</label>
-                <input id="transportation" name="transportation" type="boolean" />
+                <label htmlFor="state">State</label>
+                <input id="state" name="state" type="text" />
               </div>
 
               <div className="item">
-                <label htmlFor="bathroom">Pesticide Control</label>
-                <input id="pesticide" name="pesticide" type="boolean" />
+                <label htmlFor="type">Transportation</label>
+                <select name="transportation">
+                  <option value="rent" defaultChecked>
+                    YES
+                  </option>
+                  <option value="buy">NO</option>
+                </select>
+              </div>
+
+              <div className="item">
+                <label htmlFor="type">Pest Control</label>
+                <select name="pestControl">
+                  <option value="rent" defaultChecked>
+                    YES
+                  </option>
+                  <option value="buy">NO</option>
+                </select>
+              </div>
+
+              <div className="item">
+                <label htmlFor="type">Temp Control</label>
+                <select name="pestControl">
+                  <option value="rent" defaultChecked>
+                    YES
+                  </option>
+                  <option value="buy">NO</option>
+                </select>
+              </div>
+
+              <div className="item">
+                <label htmlFor="type">Elec / Water Supply</label>
+                <select name="pestControl">
+                  <option value="rent" defaultChecked>
+                    YES
+                  </option>
+                  <option value="buy">NO</option>
+                </select>
+              </div>
+
+              <div className="item">
+                <label htmlFor="type">Shelter For Workers</label>
+                <select name="pestControl">
+                  <option value="rent" defaultChecked>
+                    YES
+                  </option>
+                  <option value="buy">NO</option>
+                </select>
               </div>
 
               <div className="item">
@@ -100,26 +157,6 @@ function NewPostPage() {
               <div className="item">
                 <label htmlFor="longitude">Longitude</label>
                 <input id="longitude" name="longitude" type="text" />
-              </div>
-
-              <div className="item">
-                <label htmlFor="type">Type</label>
-                <select name="type">
-                  <option value="rent" defaultChecked>
-                    Rent
-                  </option>
-                  <option value="buy">Buy</option>
-                </select>
-              </div>
-              
-              <div className="item">
-                <label htmlFor="type">Property</label>
-                <select name="property">
-                  <option value="apartment">Apartment</option>
-                  <option value="house">House</option>
-                  <option value="condo">Condo</option>
-                  <option value="land">Land</option>
-                </select>
               </div>
   
               <div className="item">
@@ -132,40 +169,12 @@ function NewPostPage() {
               </div>
 
               <div className="item">
-                <label htmlFor="pet">Pet Policy</label>
-                <select name="pet">
-                  <option value="allowed">Allowed</option>
-                  <option value="not-allowed">Not Allowed</option>
-                </select>
-              </div>
-
-              <div className="item">
-                <label htmlFor="income">Income Policy</label>
-                <input
-                  id="income"
-                  name="income"
-                  type="text"
-                  placeholder="Income Policy"
-                />
-              </div>
-
-              <div className="item">
-                <label htmlFor="size">Total Size (sqft)</label>
-                <input min={0} id="size" name="size" type="number" />
-              </div>
-
-              <div className="item">
-                <label htmlFor="school">School</label>
+                <label htmlFor="school">Nearest Highway</label>
                 <input min={0} id="school" name="school" type="number" />
               </div>
 
               <div className="item">
-                <label htmlFor="bus">bus</label>
-                <input min={0} id="bus" name="bus" type="number" />
-              </div>
-
-              <div className="item">
-                <label htmlFor="restaurant">Restaurant</label>
+                <label htmlFor="restaurant">Nearest Bank</label>
                 <input min={0} id="restaurant" name="restaurant" type="number" />
               </div>
 
@@ -174,6 +183,7 @@ function NewPostPage() {
             </form>
           </div>
         </div>
+
         <div className="sideContainer">
           {/* upload widget ayegi yaha [component] */}
         </div>

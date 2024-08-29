@@ -8,12 +8,11 @@ function SinglePage() {
   const post = useLoaderData();
   console.log(post);
   
-
   return (
     <div className="singlePage">
       <div className="details">
         <div className="wrapper">
-          <Slider images={singlePostData.images} />
+          <Slider images={post.images} />
           <div className="info">
             <div className="top">
               <div className="post">

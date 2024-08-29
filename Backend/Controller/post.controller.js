@@ -1,5 +1,6 @@
 import Post from '../Models/PostModel.js';
 
+// add post
 export const createRequest = async (req, res) => {
 
     try {
