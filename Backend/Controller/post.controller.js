@@ -26,8 +26,33 @@ export const createRequest = async (req, res) => {
             return res.status(400).json({status : 400 , message: "Image is required"});
         
         }
+        const data = {
+            title,
+            description,
+            price,
+            image,
+            address,
+            state,
+            city,
+            temperature,
+            area,
+            creator : userId,
+            transportation : req.body.transportation,
+            pestControl : req.body.pestControl,
+            electricityAndWaterSupply : req.body.electricityAndWaterSupply,
+            security : req.body.security,
+            shelter : req.body.shelter,
+            latitude : req.body.latitude,
+            longitude : req.body.longitude,
+            policy : req.body.policy,
+            highway : req.body.highway,
+            bank : req.body.bank,
+
+            
+
+        }
         
-        const post  = await Post.create(req.body);
+        const post  = await Post.create(data );
         
         if(!post){
         
@@ -48,7 +73,7 @@ export const getPosts = async (req, res) => {
     try {
         // Initialize an empty query object
         const query = {};
-
+        
         // Conditionally add query parameters
         
         if (req.query.city) query.city = req.query.city;
@@ -60,19 +85,21 @@ export const getPosts = async (req, res) => {
         if (req.query.area) query.area = req.query.area;
         
         if (req.query.minPrice || req.query.maxPrice) {
-        
+            
             query.price = {};
-        
+            
             if (req.query.minPrice) query.price.gte = parseInt(req.query.minPrice);
-        
+            
             if (req.query.maxPrice) query.price.lte = parseInt(req.query.maxPrice);
-        
+            
         }
 
         // Fetch posts based on the constructed query
+        
+        console.log("request")
         const posts = await Post.find(query);
 
-        if (!posts) {
+        if (!posts || posts.length === 0) {
         
             return res.status(400).json({ status: 400, message: "No posts found" });
         

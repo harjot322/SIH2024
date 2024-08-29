@@ -43,10 +43,12 @@ const postSchema = new mongoose.Schema({
 
     },
     transportation : {
-        type: Boolean
+        type: Boolean,
+        default : false
     },
     pestControl : {
-        type: Boolean
+        type: Boolean,
+        default : false
     },
     
     electricityAndWaterSupply : {
@@ -56,19 +58,28 @@ const postSchema = new mongoose.Schema({
         type: Boolean
     },
     latitude : {
-        type: Number
+        type: Number,
+        required: true,
+        default: 28.7041
     },
     longitude : {
-        type: Number
+        type: Number,
+        required: true,
+        default: 77.1025
     },
     policy : {
-        type: String
+        type: String,
+
+
     },
     highway : {
-        type: String
+        type: String,
+        default : "NULL"
+
     },
     bank : {
-        type: String
+        type: String,
+        default : "NULL"
     }
 },{
     timestamps:true

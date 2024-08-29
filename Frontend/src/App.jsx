@@ -17,7 +17,7 @@ import ProfilePage from "./routes/profilePage/profilePage";
 import Register from "./routes/register/register";
 import Login from "./routes/login/login";
 import NewPostPage from "./routes/newPostPage/newPostPage";
-import { singlePageLoader } from "./lib/loaders";
+import { listPageLoader, singlePageLoader } from "./lib/loaders";
 
 function App() {
 
@@ -37,7 +37,9 @@ function App() {
         },
         {
           path: "/list",
-          element: <ListPage />
+          element: <ListPage />,
+          loader : listPageLoader
+
         },
         {
           path: "/list/:id",

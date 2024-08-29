@@ -27,6 +27,12 @@ function Navbar() {
         <Link to="/wiki">AgroWiki</Link>
         <Link to="">Gareeb</Link>
         <Link to="/contact">Contact</Link>
+        
+        <div id="google_translate_element">
+
+        </div>
+        
+          
       </div>
       <div className="right">
         {user ? (<div className="user">

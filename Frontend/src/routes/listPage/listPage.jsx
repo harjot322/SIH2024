@@ -6,21 +6,25 @@ import Map from '../../components/map/Map';
 import { useLoaderData } from 'react-router-dom';
 
 function ListPage() {
-  const posts = useLoaderData();
-
+  const data = useLoaderData();
+  console.log(data)
   return (
     <div className="listPage">
       <div className="listContainer">
         <div className="wrapper">
+
           <Filter />
-          {posts.map(item => (
-            <Card key = {item.id} item={item} />
+          {data.posts.map(item => (
+            
+
+              <Card key = {item._id} item={item} />
+            
           ))}
         </div>
       </div>
 
       <div className="mapContainer">
-          <Map items={posts} />
+          <Map items={data.posts} />
       </div>
     </div>
   )

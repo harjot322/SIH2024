@@ -49,7 +49,7 @@ function NewPostPage() {
 			  body: data,
 			});
 
-			navigate("/"+res.data.id)
+			navigate("/")
 
 
 		} catch (err) {

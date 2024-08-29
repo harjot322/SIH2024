@@ -10,15 +10,16 @@ export const singlePageLoader = async ({ request, params }) => {
       },
       credentials: 'include',
 
-    });
+    }).then(response => response.json());
 
-    if (!response.ok) {
-      // throw new Error(`HTTP error! status: ${response}`);
-      console.log("Error fetching post:", response);
+    if(response.status === 200){
+      return response;
+    }else{
+      toast.error("No post found");
+      return [];
     }
 
-    const data = await response.json();
-    return data;
+    
 
   } catch (error) {
     console.error("Error fetching post:", error);
@@ -28,26 +29,24 @@ export const singlePageLoader = async ({ request, params }) => {
 
 
 export const listPageLoader = async ({ request }) => {
-  const query = request.url.split("?")[1];
+  // const query = request.url.split("?")[1];
 
 
-  const postPromise = fetch(`http://localhost:5000/api/posts/?${query}`, {
+  const postPromise = await fetch(`http://localhost:5000/api/posts`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     },
     credentials: 'include',
-  }).then(response => {
-    if (!response.ok) {
-      // throw new Error(`HTTP error! status: ${response.status}`);
-      toast.error("Error fetching posts: " + response.status);
-    }
-    return response.json();
-  });
+  }).then(response => response.json());
+  if(postPromise.status === 400){
+    toast.error("No posts found");
+    return [];
+  }else{
 
-  return defer({
-    postResponse: postPromise,
-  });
+    return postPromise;
+  }
+
 };
 
 
