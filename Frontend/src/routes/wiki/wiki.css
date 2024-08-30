@@ -1,7 +1,17 @@
-#root {
-  height: 100vh;
-  width: 100vw;
+.wiki{
   display: flex;
-  flex-direction: row;
+  background-color: #1B1B1B;
+
+  .sidebar{
+    animation: fadeIn 1s;
+  }
 }
 
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
