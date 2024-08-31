@@ -3,11 +3,12 @@ import Slideshow from '../../components/slideshow/Slideshow';
 import './homePage.scss';
 
 const images = [
-    "kisaan2.jpg",
+    "resize.jpg",
     "pexels-pat-whelen-2913248-6026441.jpg",
-    "pexels-rihan-ishan-das-739500-2519332.jpg",
-
+    "resize2.jpg",
 ]
+
+const videoSrc = "ex-video.mp4";
 
 function HomePage() {
     return (
@@ -44,7 +45,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="imgContainer">
-                <Slideshow images = {images} />
+                <Slideshow images = {images} videoSrc = {videoSrc} />
             </div>
 
 

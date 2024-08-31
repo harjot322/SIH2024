@@ -19,7 +19,7 @@ export const createRequest = async (req, res) => {
         }
         
         
-        const image = req.files.image[0].path.replace(/^Uploads\//, '').trim();
+        const image = req.files.image[0].filename;
         console.log(image);
         if(!image){
 
