@@ -1,5 +1,13 @@
 import SearchBar from '../../components/searchBar/SearchBar';
+import Slideshow from '../../components/slideshow/Slideshow';
 import './homePage.scss';
+
+const images = [
+    "kisaan2.jpg",
+    "pexels-pat-whelen-2913248-6026441.jpg",
+    "pexels-rihan-ishan-das-739500-2519332.jpg",
+
+]
 
 function HomePage() {
     return (
@@ -36,7 +44,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="imgContainer">
-                <img src="/kisaan2.jpg" alt="" />
+                <Slideshow images = {images} />
             </div>
 
 
