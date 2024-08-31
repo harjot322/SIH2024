@@ -21,6 +21,7 @@ import { listPageLoader, singlePageLoader } from "./lib/loaders";
 import Ask from "./components/ask/Ask";
 import Sidebar from "./components/sidebar/Sidebar";
 import Wiki from "./routes/wiki/Wiki";
+import Contact from "./routes/contact/Contact";
 
 function App() {
 
@@ -68,6 +69,10 @@ function App() {
         {
           path: "/wiki",
           element: <Wiki />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
         },
       ]
     },
