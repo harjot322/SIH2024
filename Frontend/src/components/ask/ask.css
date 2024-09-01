@@ -142,6 +142,24 @@ height: 20px;
 animation: loader 4s infinite linear;
 }
 
+/* .box{
+  width: 100%;
+  height: 20px;
+  background-color: #f6f7f8;
+  border-radius: 4px;
+  position: relative;
+} */
+.promp {
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
 @keyframes loader{
   0%{
       background-position: -800px 0px;

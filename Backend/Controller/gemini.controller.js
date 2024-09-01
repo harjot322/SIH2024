@@ -49,9 +49,9 @@ export const plantCare = async (req, res) => {
     try {
 
         
-
+        console.log(true)
         const {promp} =  req.body;
-
+        console.log(promp);
         
         
         let image;
@@ -103,7 +103,7 @@ export const plantCare = async (req, res) => {
 
     } catch (error) {
 
-        return res.status(500).json({ status: 500, message: error.message });
+        return res.status(500).json({  message: error.message });
 
     }
 

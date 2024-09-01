@@ -1,4 +1,4 @@
-import SearchBar from '../../components/searchBar/SearchBar';
+import SearchBar from '../../components/searchBar/searchBar';
 import Slideshow from '../../components/slideshow/Slideshow';
 import './homePage.scss';
 
