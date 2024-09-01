@@ -1,124 +1,83 @@
-/* Add this prefix to every CSS selector to ensure styles are scoped */
-.contact-us-page .contact-us-container {
+.contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 40px 60px;
-  width: 100%;
   height: calc(100vh - 150px);
-  background: linear-gradient(180deg, #FFF9E6 0%, #FFD580 100%);
+  padding: 20px;
+  background: linear-gradient(to bottom right, beige, #f5d5a7); /* Beige-yellow gradient */
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
   border-radius: 8px;
-  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
 }
 
-.contact-us-page .contact-left {
+.contact-left {
   flex: 1;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-right: 40px;
 }
 
-.contact-us-page .contact-left h1 {
-  font-size: 48px;
-  color: #333;
-  margin-bottom: 10px;
+.contact-left h1 {
+  font-size: 3rem; /* Larger text */
+  margin-bottom: 20px;
   font-weight: bold;
+  color: #333;
 }
 
-.contact-us-page .contact-left p {
-  font-size: 20px;
+.contact-left p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   color: #555;
-  margin-bottom: 8px;
 }
 
-.contact-us-page .contact-left .contact-info {
-  font-size: 20px;
-  color: #777;
-  margin-top: 15px;
-}
-
-.contact-us-page .contact-left .contact-info a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-us-page .contact-left .contact-info a:hover {
-  text-decoration: underline;
-}
-
-.contact-us-page .contact-right {
+.contact-right {
   flex: 1;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.contact-us-page form {
+.contact-right form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-us-page input,
-.contact-us-page textarea {
+.contact-right input, 
+.contact-right textarea {
+  font-size: 1rem; /* Minimalistic font */
+  padding: 10px;
   margin-bottom: 15px;
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 4px;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  box-shadow: none;
-  font-family: 'Arial', sans-serif;
-}
-
-.contact-us-page input::placeholder,
-.contact-us-page textarea::placeholder {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #999;
-}
-
-.contact-us-page input:focus,
-.contact-us-page textarea:focus {
-  border-color: #666;
+  border-radius: 4px;
   outline: none;
 }
 
-.contact-us-page textarea {
-  height: 100px;
-  resize: none;
+.contact-right input::placeholder, 
+.contact-right textarea::placeholder {
+  font-family: 'Arial', sans-serif; /* Minimalistic font */
 }
 
-.contact-us-page button {
+.contact-right button {
+  padding: 10px;
   background-color: #000;
   color: #fff;
-  padding: 15px 20px;
-  font-size: 16px;
+  font-size: 1.2rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact-us-page button:hover {
+.contact-right button:hover {
   background-color: #333;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .contact-us-page .contact-us-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
-  }
-
-  .contact-us-page .contact-left,
-  .contact-us-page .contact-right {
-    width: 100%;
-    padding: 0;
-  }
-
-  .contact-us-page .contact-left {
-    margin-bottom: 30px;
-  }
+.contact-phone {
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
 }

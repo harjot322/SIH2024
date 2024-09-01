@@ -12,6 +12,7 @@ const videoSrc = "ex-video.mp4";
 
 function HomePage() {
     return (
+        <div>
         <div className="homePage">
             <div className="textContainer">
                 <div className="wrapper">
@@ -48,7 +49,9 @@ function HomePage() {
                 <Slideshow images = {images} videoSrc = {videoSrc} />
             </div>
 
-
+        </div>
+            {/* post here to appear on landing page */}
+            
         </div>
     );
 }
