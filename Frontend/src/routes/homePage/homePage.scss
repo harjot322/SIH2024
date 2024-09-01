@@ -34,13 +34,14 @@
     }
 
     .title {
-      font-size: 48px;
+      font-size: 32px; // Increased font size
       font-weight: bold;
       margin-top: auto;
-      margin-bottom: 20px;
+      margin-bottom: 45px;
+      height: 100px; // Fixed height to prevent layout shift
 
       @include lg {
-        font-size: 48px;
+        font-size: 32px;
       }
     }
   }
