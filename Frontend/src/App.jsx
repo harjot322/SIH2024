@@ -22,6 +22,9 @@ import Ask from "./components/ask/Ask";
 import Sidebar from "./components/sidebar/Sidebar";
 import Wiki from "./routes/wiki/Wiki";
 import Contact from "./routes/contact/Contact";
+import Retail from "./routes/retail/Retail";
+import Wholesale from "./routes/wholesale/Wholesale";
+import Preorder from "./routes/preorder/Preorder";
 
 function App() {
 
@@ -73,6 +76,18 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/retail",
+          element: <Retail />,
+        },
+        {
+          path: "/wholesale",
+          element: <Wholesale />,
+        },
+        {
+          path: "/preorder",
+          element: <Preorder />,
         },
       ]
     },
