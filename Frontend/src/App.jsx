@@ -25,7 +25,12 @@ import Contact from "./routes/contact/Contact";
 import Retail from "./routes/retail/Retail";
 import Wholesale from "./routes/wholesale/Wholesale";
 import Preorder from "./routes/preorder/Preorder";
-import PdfPage from "./routes/PdfPage/PdfPage";
+// <<<<<<< HEAD
+// import PdfPage from "./routes/PdfPage/PdfPage";
+// =======
+// import Retailpage from "./routes/retailpage/Retailpage";
+// import Wholesalepage from "./routes/wholesalepage/Wholesalepage";
+// >>>>>>> 239bc383e9af8518dddf48c2dccb91fce9550e55
 
 function App() {
 
@@ -90,10 +95,20 @@ function App() {
           path: "/preorder",
           element: <Preorder />,
         },
-        {
-          path : '/pdf',
-          element : <PdfPage />
-        }
+//         {
+// <<<<<<< HEAD
+//           path : '/pdf',
+//           element : <PdfPage />
+//         }
+// =======
+//           path: "/retail/:id",
+//           element: <Retailpage />,
+//         },
+//         {
+//           path: "/wholesale/:id",
+//           element: <Wholesalepage />,
+//         },
+// >>>>>>> 239bc383e9af8518dddf48c2dccb91fce9550e55
       ]
     },
   ]);
