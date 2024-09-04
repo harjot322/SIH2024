@@ -21,10 +21,6 @@ const postSchema = new mongoose.Schema({
     image : {
         type: String
     },
-    address : {
-        type: String,
-        required: true
-    },
     state : {
         type: String,
         required: true
@@ -33,54 +29,26 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    temperature : {
-        type: Number
-
-    },
+    
     area : {
         type: Number,
         required: true
 
     },
-    transportation : {
+    extras : {
         type: Boolean,
         default : false
     },
-    pestControl : {
-        type: Boolean,
-        default : false
+    deliveryexpected : {
+        type : "String",
+        required : true,
+        default : "1-2 Month"
     },
     
-    electricityAndWaterSupply : {
-        type: Boolean
-    },
-    shelter : {
-        type: Boolean
-    },
-    latitude : {
-        type: Number,
-        required: true,
-        default: 28.7041
-    },
-    longitude : {
-        type: Number,
-        required: true,
-        default: 77.1025
-    },
     policy : {
         type: String,
 
-
     },
-    highway : {
-        type: String,
-        default : "NULL"
-
-    },
-    bank : {
-        type: String,
-        default : "NULL"
-    }
 },{
     timestamps:true
 });

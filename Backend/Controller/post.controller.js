@@ -6,12 +6,12 @@ export const createRequest = async (req, res) => {
     try {
         console.log(req.body);
 
-        const { title, description, price , address, state, city , temperature ,area } = req.body;
+        const { title, description, price ,deliveryexpected, state, city  ,area ,extras  , policy} = req.body;
         
         const userId = req.user._id;
         
         
-        if(!title || !description || !price || !address || !state || !city || !temperature || !area){
+        if(!title || !description || !price || !deliveryexpected || !state || !city || !extras || !area || !policy){
             console.log(true);
             
             return res.status(400).json({status : 400 , message: "All fields are required"});
@@ -31,22 +31,14 @@ export const createRequest = async (req, res) => {
             description,
             price,
             image,
-            address,
+            deliveryexpected,
             state,
             city,
-            temperature,
+            policy,
+            extras,
             area,
             creator : userId,
-            transportation : req.body.transportation,
-            pestControl : req.body.pestControl,
-            electricityAndWaterSupply : req.body.electricityAndWaterSupply,
-            security : req.body.security,
-            shelter : req.body.shelter,
-            latitude : req.body.latitude,
-            longitude : req.body.longitude,
-            policy : req.body.policy,
-            highway : req.body.highway,
-            bank : req.body.bank,
+            
 
             
 
@@ -80,7 +72,7 @@ export const getPosts = async (req, res) => {
         
         if (req.query.state) query.state = req.query.state;
         
-        if (req.query.temperature) query.temperature = req.query.temperature;
+        
         
         if (req.query.area) query.area = req.query.area;
         

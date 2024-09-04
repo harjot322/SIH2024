@@ -5,7 +5,7 @@ function Card({ item }) {
 
 	return (
 		<div className="card">
-			<Link to={`/list/${item._idid}`} className="imageContainer">
+			<Link to={`/list/${item._id}`} className="imageContainer">
 				<img src={`http://localhost:5000/uploads/${item.image}`} alt="" />
 			</Link>
 
@@ -13,10 +13,12 @@ function Card({ item }) {
 				<h2 className="title">
 					<Link to={`/list/${item._id}`}>{item.title}</Link>
 				</h2>
+				{/* description show karni hai */}
 				<p className='address'>
 					<img src="/pin.png" alt="" />
 					<span>{item.address}</span>
 				</p>
+				{/* budget */}
 				<p className='price'>
 					${item.price}
 				</p>
@@ -24,12 +26,14 @@ function Card({ item }) {
 				<div className="bottom">
 					<div className="features">
 						<div className="feature">
+							{/* Quantity */}
 							<img src="/bed.png" alt="" />
 							<span>{item.bedroom} bedrooms</span>
 						</div>
+						{/* delivery date */}
 						<div className="feature">
 							<img src="/bath.png" alt="" />
-							<span>{item.bedroom} bathrooms</span>
+							<span>9 months</span>
 						</div>
 					</div>
 					<div className="icons">
