@@ -1,0 +1,38 @@
+.buttons {
+  display: flex;
+  justify-content: space-between; /* Distribute buttons evenly across the full width */
+  margin-top: 20px;
+  width: 100%; /* Make sure the buttons container takes the full width */
+}
+
+.button {
+  flex: 1; /* Each button will take an equal portion of the available space */
+  margin: 0 10px; /* Add some space on the left and right of each button */
+}
+
+.button button {
+  width: 100%; /* Make the button fill its container */
+  background-color: #f2c12e; /* Match the yellow theme */
+  color: #000; /* Black text */
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Hover Animation */
+.button button:hover {
+  background-color: #000; /* Black background on hover */
+  color: #f2c12e; /* Yellow text on hover */
+  border: 2px solid #f2c12e; /* Yellow border on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Active Animation */
+.button button:active {
+  transform: scale(0.95); /* Slightly shrink the button on click */
+  transition: transform 0.1s ease;
+}
