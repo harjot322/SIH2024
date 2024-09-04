@@ -1,0 +1,404 @@
+.wholesale {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 100vh;
+    background-color: #f0f8ff; /* Light background for a fresh look */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.search-input {
+    border: 2px solid #007BFF;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search-input:focus {
+    width: 80%;
+    border-color: #0056b3;
+}
+
+.search-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 0 50px 50px 0;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.search-button:active {
+    transform: scale(0.95);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px; /* Wider cards */
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px; /* Fixed height for images */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-price {
+    margin: 15px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.card-price p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.show-bid-button {
+    margin-top: 15px;
+    padding: 16px 20px; /* Larger padding for a bigger look */
+    border: none;
+    border-radius: 12px; /* Squarish rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Larger font size */
+    color: #fff;
+    background-image: linear-gradient(to right, #6a11cb, #2575fc); /* Attractive gradient */
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 160px; /* Make button slightly wider */
+    height: 50px; /* Increase height for a larger button */
+}
+
+.show-bid-button:hover {
+    background-image: linear-gradient(to right, #5a09ab, #2057ec); /* Slight gradient change on hover */
+    box-shadow: 0 6px 12px rgba(90, 9, 171, 0.3); /* Softer shadow on hover */
+}
+
+.show-bid-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(90, 9, 171, 0.2); /* Shadow reduction on click */
+}
+
+/* .wholesale {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 100vh;
+    background-color: #f0f8ff; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.search-input {
+    border: 2px solid #007BFF;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search-input:focus {
+    width: 80%;
+    border-color: #0056b3;
+}
+
+.search-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 0 50px 50px 0;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.search-button:active {
+    transform: scale(0.95);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px; 
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-quantity {
+    margin: 15px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.card-quantity label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.quantity-selector {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quantity-selector:hover {
+    border-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.show-bid-button {
+    margin-top: 15px;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px; 
+    color: #fff;
+    background-image: linear-gradient(to right, #6a11cb, #2575fc); 
+    transition: background 0.3s ease, transform 0.2s, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 160px; 
+    height: 50px; 
+}
+
+.show-bid-button:hover {
+    background-image: linear-gradient(to right, #5a09ab, #2057ec); 
+    box-shadow: 0 6px 12px rgba(90, 9, 171, 0.3); 
+}
+
+.show-bid-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(90, 9, 171, 0.2); 
+} */
+
+
+
+/* .wholesale {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 100vh;
+    background-color: #f0f8ff; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.search-input {
+    border: 2px solid #007BFF;
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+    transition: width 0.3s ease, border-color 0.3s ease;
+}
+
+.search-input:focus {
+    width: 80%;
+    border-color: #0056b3;
+}
+
+.search-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 0 50px 50px 0;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.search-button:active {
+    transform: scale(0.95);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-quantity {
+    margin: 15px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.card-quantity label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.quantity-selector {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.quantity-selector:hover {
+    border-color: #007BFF;
+}
+
+.bid-button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.bid-button:hover {
+    background-color: #218838;
+}
+
+.bid-button:active {
+    transform: scale(0.95);
+} */
