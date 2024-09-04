@@ -99,9 +99,9 @@ function SinglePage() {
             </div>
           </div>
           <p className="title">Location</p>
-          <div className="mapContainer">
+          {/* <div className="mapContainer">
             <Map items={[post]} />
-          </div>
+          </div> */}
           <div className="buttons">
             <button>
               <img src="/chat.png" alt="" />

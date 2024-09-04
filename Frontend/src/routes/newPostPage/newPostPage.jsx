@@ -73,16 +73,16 @@ function NewPostPage() {
 							<input id="title" name="title" type="text" />
 						</div>
 						<div className="item">
-							<label htmlFor="price">Price</label>
+							<label htmlFor="price">Budget</label>
 							<input id="price" name="price" type="number" />
 						</div>
 						<div className="item">
-							<label htmlFor="address">Address</label>
+							<label htmlFor="address">Delivery Expected</label>
 							<input id="address" name="address" type="text" />
 						</div>
 
 						<div className="item">
-							<label htmlFor="size">Total Size (sqft)</label>
+							<label htmlFor="size">Quantity</label>
 							<input min={0} id="size" name="area" type="number" />
 						</div>
 
@@ -102,75 +102,26 @@ function NewPostPage() {
 						</div>
 
 						<div className="item">
-							<label htmlFor="type">Transportation</label>
-							<select name="transportation">
-								<option value={true} defaultChecked>YES</option>
-								<option value={false}>NO</option>
-							</select>
-						</div>
-
-						<div className="item">
-							<label htmlFor="type">Pest Control</label>
-							<select name="pestControl">
-								<option value={true} defaultChecked>YES</option>
-								<option value={false}>NO</option>
-							</select>
-						</div>
-
-						<div className="item">
-							<label htmlFor="type">Temperature</label>
-							<input id="temperature" name="temperature" type="number" />
-						</div>
-
-						<div className="item">
-							<label htmlFor="type">Elec / Water Supply</label>
-							<select name="electricityAndWaterSupply">
-								<option value={true} defaultChecked>
-									YES
-								</option>
-								<option value={false}>NO</option>
-							</select>
-						</div>
-
-						<div className="item">
-							<label htmlFor="type">Shelter For Workers</label>
-							<select name="shelter">
-								<option value={true} defaultChecked>YES</option>
-								<option value={false}>NO</option>
-							</select>
-						</div>
-
-						<div className="item">
-							<label htmlFor="latitude">Latitude</label>
-							<input id="latitude" name="latitude" type="text" />
-						</div>
-
-						<div className="item">
-							<label htmlFor="longitude">Longitude</label>
-							<input id="longitude" name="longitude" type="text" />
-						</div>
-
-						<div className="item">
-							<label htmlFor="utilities">Utilities Policy</label>
+							<label htmlFor="utilities">Contract</label>
 							<select name="policy">
-								<option value="owner">Owner is responsible</option>
-								<option value="tenant">Tenant is responsible</option>
+								<option value="owner">By Agropact</option>
+								<option value="tenant">Self</option>
 								<option value="shared">Shared</option>
 							</select>
 						</div>
 
 						<div className="item">
-							<label htmlFor="nearestHighway">Nearest Highway</label>
-							<input type='text' name='highway' />
+							<label htmlFor="utilities">Extras</label>
+							<select name="policy">
+								<option value="owner">Pesticides Available</option>
+								<option value="tenant">Transportation</option>
+								<option value="shared">Storage Space</option>
+							</select>
 						</div>
 
-						<div className="item">
-							<label htmlFor="bank">Nearest Bank</label>
-							<input type='text' name='bank' />
-						</div>
+
 						<div className=''>
 							<input type='file' onChange={(e) => setImages(e.target.files)} />
-
 						</div>
 
 						<button className="sendButton">Add</button>
@@ -179,9 +130,8 @@ function NewPostPage() {
 				</div>
 			</div>
 
-			<div className="sideContainer">
-				{/* upload widget ayegi yaha [component] */}
-			</div>
+			{/* <div className="sideContainer">
+			</div> */}
 		</div>
 	)
 }

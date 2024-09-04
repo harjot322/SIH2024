@@ -19,9 +19,9 @@ function Filter() {
 
     return (
         <div className="filter" onSubmit={submitHandler}>
-            <h1>
+            {/* <h1>
                 Search results for <b>Delhi</b>
-            </h1>
+            </h1> */}
             <div className="top">
                 <div className="item">
                     <label htmlFor="city">Location</label>
@@ -35,8 +35,11 @@ function Filter() {
             </div>
 
             <div className="bottom">
+                <button>
+                    <img src="/search.png" alt="" />
+                </button>
                 {/* area, price, days, temp, extras */}
-                <div className="item">
+                {/* <div className="item">
                     <label htmlFor="type">Area</label>
                     <select name="type" id="type">
                         <option value="">any</option>
@@ -44,9 +47,9 @@ function Filter() {
                         <option value="buy">100-200 sqft</option>
                         <option value="rent">200-300 sqft</option>
                     </select>
-                </div>
+                </div> */}
 
-                <div className="item">
+                {/* <div className="item">
                     <label htmlFor="minPrice">Price</label>
                     <input
                         type="number"
@@ -54,9 +57,9 @@ function Filter() {
                         name="minPrice"
                         placeholder="any"
                     />
-                </div>
+                </div> */}
 
-                <div className="item">
+                {/* <div className="item">
                     <label htmlFor="minPrice">Days</label>
                     <input
                         type="number"
@@ -64,8 +67,8 @@ function Filter() {
                         name="days"
                         placeholder="any"
                     />
-                </div>
-
+                </div> */}
+{/* 
                 <div className="item">
                     <label htmlFor="minPrice">Temp(°C)</label>
                     <input
@@ -74,9 +77,9 @@ function Filter() {
                         name="temp"
                         placeholder="any"
                     />
-                </div>
+                </div> */}
 
-                <div className="item">
+                {/* <div className="item">
                     <label htmlFor="type">Extras</label>
                     <select name="extras" id="type">
                         <option value="">any</option>
@@ -85,11 +88,8 @@ function Filter() {
                         <option value="p">Water supper 24/7</option>
                         <option value="p">Refrigerators</option>
                     </select>
-                </div>
+                </div> */}
 
-                <button>
-                    <img src="/search.png" alt="" />
-                </button>
 
             </div>
         </div>
