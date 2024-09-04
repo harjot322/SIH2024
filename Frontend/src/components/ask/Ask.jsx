@@ -41,19 +41,19 @@ function Ask() {
         </div>
         <div className="cards">
           <div className="card">
-            <p>Bhojpuri Gaane</p>
+            <p>How to improve my yeild?</p>
             <img src={assets.compass_icon} alt="" />
           </div>
           <div className="card">
-            <p>Gareebi Kaise Mitaaye</p>
+            <p>Suggest organic farming techniques</p>
             <img src={assets.bulb_icon} alt="" />
           </div>
           <div className="card">
-            <p>Fasal Kharab Hogyi Kya kare?</p>
+            <p>Teach me about sustainable farming</p>
             <img src={assets.message_icon} alt="" />
           </div>
           <div className="card">
-            <p>Biwi ko khet mein pakda kya kare?</p>
+            <p>Best crops to sell in this seasons</p>
             <img src={assets.code_icon} alt="" />
           </div>
         </div>
