@@ -5,7 +5,7 @@ function Card({ item }) {
 
 	return (
 		<div className="card">
-			<Link to={`/list/${item._idid}`} className="imageContainer">
+			<Link to={`/list/${item._id}`} className="imageContainer">
 				<img src={`http://localhost:5000/uploads/${item.image}`} alt="" />
 			</Link>
 
@@ -25,7 +25,7 @@ function Card({ item }) {
 					<div className="features">
 						<div className="feature">
 							<img src="/bed.png" alt="" />
-							<span>{item.bedroom} bedrooms</span>
+							<span>{item.state} bedrooms</span>
 						</div>
 						<div className="feature">
 							<img src="/bath.png" alt="" />
