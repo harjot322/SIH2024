@@ -1,0 +1,18 @@
+/* TextRotator.css */
+.text-container {
+  position: relative;
+  overflow: hidden;
+  height: 100px; /* Adjust based on your design */
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  text-align: left; /* Or center, based on your design */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade {
+  opacity: 1;
+}

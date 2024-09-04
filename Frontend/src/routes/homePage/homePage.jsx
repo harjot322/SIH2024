@@ -1,5 +1,6 @@
 import SearchBar from '../../components/searchBar/searchBar';
 import Slideshow from '../../components/slideshow/Slideshow';
+import TextRotator from '../../components/text/TextRotator';
 import './homePage.scss';
 
 const images = [
@@ -12,14 +13,13 @@ const videoSrc = "ex-video.mp4";
 
 function HomePage() {
     return (
+        <div>
         <div className="homePage">
             <div className="textContainer">
                 <div className="wrapper">
-                    <h1 className='title'>
-                        Need land to store harvested produce?
-                        <br />
-                        AgroVision is here for you BBG!
-                    </h1>
+                    <div className='title'>
+                        <TextRotator />
+                    </div>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis excepturi qui incidunt id, non pariatur eum vel laboriosam dicta dolor distinctio, aspernatur corporis voluptatum! Cum fuga laudantium magni id consequatur!
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, sit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, molestiae?
@@ -48,7 +48,9 @@ function HomePage() {
                 <Slideshow images = {images} videoSrc = {videoSrc} />
             </div>
 
-
+        </div>
+            {/* post here to appear on landing page */}
+            
         </div>
     );
 }

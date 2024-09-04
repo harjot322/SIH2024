@@ -25,8 +25,8 @@ function Navbar() {
         </Link>
         <Link to="/">Home</Link>
         <Link to="/wiki">AgroWiki</Link>
-        <Link to="">Gareeb</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="">Loans</Link>
+        <Link to="/contact">Contact Us</Link>
         
         <div id="google_translate_element">
 
@@ -62,10 +62,10 @@ function Navbar() {
 
           <Link to="/">Home</Link>
           <Link to="/wiki">AgroWiki</Link>
-          <Link to="">Gareeb</Link>
-          <a href="">Farmer?</a>
-          <a href="">Harvester?</a>
-          <Link to="/contact">Contact</Link>
+          <Link to="">Loan</Link>
+          <a href="">Login</a>
+          <a href="">Sign UP?</a>
+          <Link to="/contact">Contact Us</Link>
         </div>
       </div>
     </nav>
