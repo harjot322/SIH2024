@@ -25,6 +25,7 @@ import Contact from "./routes/contact/Contact";
 import Retail from "./routes/retail/Retail";
 import Wholesale from "./routes/wholesale/Wholesale";
 import Preorder from "./routes/preorder/Preorder";
+import PdfPage from "./routes/PdfPage/PdfPage";
 
 function App() {
 
@@ -89,6 +90,10 @@ function App() {
           path: "/preorder",
           element: <Preorder />,
         },
+        {
+          path : '/pdf',
+          element : <PdfPage />
+        }
       ]
     },
   ]);

@@ -36,15 +36,18 @@ const postSchema = new mongoose.Schema({
 
     },
     extras : {
-        type: Boolean,
-        default : false
+        type: "String",
+        
     },
     deliveryexpected : {
         type : "String",
         required : true,
         default : "1-2 Month"
     },
-    
+    quantity : {
+        type: Number,
+        required: true,
+    },
     policy : {
         type: String,
 

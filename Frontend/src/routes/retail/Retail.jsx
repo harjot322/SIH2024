@@ -27,14 +27,14 @@ function Retail() {
             <h2>{crop.name}</h2>
             <p>Order Time: {crop.orderTime}</p>
             <div className="card-quantity">
-              <label htmlFor={`quantity-${index}`}>Quantity:</label>
-              <input
+              <button className='buttonUi'>Details</button>
+              {/* <input
                 type="number"
                 id={`quantity-${index}`}
                 name="quantity"
                 defaultValue={crop.quantity.split(' ')[0]} // Display the numeric value only
                 min="0"
-              />
+              /> */}
             </div>
           </div>
         ))}

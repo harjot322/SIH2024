@@ -5,7 +5,7 @@ import './wiki.css'
 function Wiki() {
   return (
     <div className="wiki">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Ask />
     </div>
   );

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import toast from 'react-hot-toast';
 
 
 function NewPostPage() {
@@ -25,29 +26,32 @@ function NewPostPage() {
 			data.append("title", inputs.title);
 			data.append("description", value);
 			data.append("price", parseInt(inputs.price));
-			data.append("address", inputs.address);
+			data.append("deliveryExpected", inputs.deliveryExpected);
 			data.append("state", inputs.state);
 			data.append("city", inputs.city);
-			data.append("area", inputs.area);
-			data.append("transportation", inputs.transportation);
-			data.append("pestControl", inputs.pestControl);
-			data.append("temperature", inputs.temperature);
-			data.append("electricityAndWaterSupply", inputs.electricityAndWaterSupply);
-			data.append("shelter", inputs.shelter);
-			data.append("latitude", inputs.latitude);
-			data.append("longitude", inputs.longitude);
 			data.append("policy", inputs.policy);
-			data.append("highway", inputs.highway);
-			data.append("bank", inputs.bank);
+			data.append("extras", inputs.extras);
+			data.append("quantity", parseInt(inputs.quantity));
+			data.append("area", parseInt(inputs.area));
 			data.append("image", images[0]);
+
 
 			
 
 			const res = await fetch("http://localhost:5000/api/posts/create", {
 			  method: "POST",
-			  credentials: "include",
+			  headers : {
+				"Authorization" : `Bearer ${JSON.stringify(localStorage.getItem("user")).token}`
+			  },
+			  "credentials": "include",
 			  body: data,
 			});
+			const result = await res.json();
+			if(result.status === 400){
+				toast.error(result.message)
+				return ;
+			}
+			toast.success(result.message)
 
 			navigate("/")
 
@@ -78,11 +82,15 @@ function NewPostPage() {
 						</div>
 						<div className="item">
 							<label htmlFor="address">Delivery Expected</label>
-							<input id="address" name="address" type="text" />
+							<input id="address" name="deliveryExpected" type="text" />
 						</div>
 
 						<div className="item">
 							<label htmlFor="size">Quantity</label>
+							<input min={0} id="size" name="quantity" type="number" />
+						</div>
+						<div className="item">
+							<label htmlFor="size">Area</label>
 							<input min={0} id="size" name="area" type="number" />
 						</div>
 
@@ -100,7 +108,6 @@ function NewPostPage() {
 							<label htmlFor="state">State</label>
 							<input id="state" name="state" type="text" />
 						</div>
-
 						<div className="item">
 							<label htmlFor="utilities">Contract</label>
 							<select name="policy">
@@ -112,7 +119,7 @@ function NewPostPage() {
 
 						<div className="item">
 							<label htmlFor="utilities">Extras</label>
-							<select name="policy">
+							<select name="extras">
 								<option value="owner">Pesticides Available</option>
 								<option value="tenant">Transportation</option>
 								<option value="shared">Storage Space</option>

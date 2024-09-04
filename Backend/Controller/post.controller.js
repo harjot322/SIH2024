@@ -6,17 +6,17 @@ export const createRequest = async (req, res) => {
     try {
         console.log(req.body);
 
-        const { title, description, price ,deliveryexpected, state, city  ,area ,extras  , policy} = req.body;
+        const { title, description, price ,deliveryExpected, state, city  ,area ,extras ,quantity  , policy} = req.body;
         
         const userId = req.user._id;
         
         
-        if(!title || !description || !price || !deliveryexpected || !state || !city || !extras || !area || !policy){
-            console.log(true);
+        if(!title || !description || !price || !deliveryExpected || !state || !city || !extras || !area || !policy || !quantity){
             
             return res.status(400).json({status : 400 , message: "All fields are required"});
             
         }
+        console.log(true);
         
         
         const image = req.files.image[0].filename;
@@ -31,12 +31,13 @@ export const createRequest = async (req, res) => {
             description,
             price,
             image,
-            deliveryexpected,
+            deliveryexpected : deliveryExpected,
             state,
             city,
             policy,
             extras,
             area,
+            quantity,
             creator : userId,
             
 
