@@ -1,3 +1,4 @@
+import Buttons from '../../components/buttons/Buttons';
 import SearchBar from '../../components/searchBar/searchBar';
 import Slideshow from '../../components/slideshow/Slideshow';
 import TextRotator from '../../components/text/TextRotator';
@@ -24,7 +25,10 @@ function HomePage() {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis excepturi qui incidunt id, non pariatur eum vel laboriosam dicta dolor distinctio, aspernatur corporis voluptatum! Cum fuga laudantium magni id consequatur!
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, sit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, molestiae?
                     </p>
+                    <Buttons />
                     <SearchBar />
+
+                    {/* button ayenge yaha */}
 
                     <div className="boxes">
                         <div className="box">
