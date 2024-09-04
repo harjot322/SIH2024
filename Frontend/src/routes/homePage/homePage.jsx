@@ -10,7 +10,7 @@ const images = [
     "resize2.jpg",
 ]
 
-const videoSrc = "ex-video.mp4";
+// const videoSrc = "ex-video.mp4";
 
 function HomePage() {
     return (
@@ -49,7 +49,7 @@ function HomePage() {
                 </div>
             </div>
             <div className="imgContainer">
-                <Slideshow images = {images} videoSrc = {videoSrc} />
+                <Slideshow images = {images}  />
             </div>
 
         </div>
