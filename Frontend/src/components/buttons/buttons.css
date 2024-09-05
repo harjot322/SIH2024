@@ -11,13 +11,14 @@
 }
 
 .button button {
+  height:125%;
   width: 100%; /* Make the button fill its container */
   background-color: #f2c12e; /* Match the yellow theme */
   color: #000; /* Black text */
   font-size: 16px;
   padding: 10px 20px;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-sizing: border-box; /* Include padding and border in the width */
