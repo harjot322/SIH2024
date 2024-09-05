@@ -9,7 +9,7 @@ const PdfPage = () => {
             <PDFViewer width="100%" height="600">
                 <MyDocument />
             </PDFViewer>
-            <PDFDownloadLink document={<MyDocument />} fileName="example.pdf">
+            <PDFDownloadLink document={<MyDocument />} fileName="LegalStatement.pdf">
                 {({ blob, url, loading, error }) =>
                     loading ? 'Loading document...' : 'Download PDF'
                 }
