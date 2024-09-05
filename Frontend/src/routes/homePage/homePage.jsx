@@ -21,12 +21,11 @@ function HomePage() {
                     <div className='title'>
                         <TextRotator />
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis excepturi qui incidunt id, non pariatur eum vel laboriosam dicta dolor distinctio, aspernatur corporis voluptatum! Cum fuga laudantium magni id consequatur!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, sit? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, molestiae?
+                    <p className='para'>
+                    Welcome to our platform dedicated to revolutionizing agriculture through Assured Contract Farming. We offer innovative solutions that ensure stable market access for farmers by connecting them directly with buyers through pre-arranged contracts. Our system stabilizes pricing, reduces market volatility, and empowers farmers to achieve fair and predictable returns
                     </p>
                     <Buttons />
-                    <SearchBar />
+                    {/* <SearchBar /> */}
 
                     {/* button ayenge yaha */}
 

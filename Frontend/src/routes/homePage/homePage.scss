@@ -21,10 +21,11 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px; // Reduced gap for better spacing
-    height: 80%;
+    // height: 80%;
     margin: 20px;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: 20px  auto;
+    height: auto;
+    // margin-top: auto;
     @include md{
       padding: 0;
     }
@@ -34,17 +35,21 @@
     }
 
     .title {
-      font-size: 32px; // Increased font size
+      font-size: 38px; // Increased font size
       font-weight: bold;
       margin-top: auto;
-      margin-bottom: 45px;
+      margin-bottom: 80px;
       height: 100px; // Fixed height to prevent layout shift
 
-      @include lg {
-        font-size: 32px;
-      }
+      // @include lg {
+      //   font-size: 32px;
+      // }
+    }
+    .para{
+      font-size: 20px;
     }
   }
+
 
     .boxes {
       display: flex;
@@ -56,35 +61,35 @@
       }
 
       h1{
-        font-size: 36px;
+        font-size: 45px;
         @include lg{
-          font-size: 32px;
+          font-size: 42px;
           margin-bottom: 10px;
         }
       }
 
       h2 {
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 300;
         margin-bottom: 10px ;      }
     }
   }
 
   .imgContainer {
-    flex: 1; // Match text container size
+    flex: 0.870; // Match text container size
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50%;
     margin-left: 20px; 
-    margin-right: -50px;// Balance space between text and image
+    margin-right: -80px;// Balance space between text and image
     margin-bottom: 75px;
     margin-top: -25px;
 
 
     @include md {
       display: none;
-      margin-left: 0;
+      // margin-left: 0;
     }
 
     img {
