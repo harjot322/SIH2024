@@ -19,17 +19,16 @@ function Filter() {
 
     return (
         <div className="filter" onSubmit={submitHandler}>
-            {/* <h1>
-                Search results for <b>Delhi</b>
-            </h1> */}
+            <h1>
+                Search for crops...
+            </h1>
             <div className="top">
                 <div className="item">
-                    <label htmlFor="city">Location</label>
                     <input
                         type="text"
                         id="city"
                         name="city"
-                        placeholder="City Location"
+                        placeholder="Enter crop name..."
                     />
                 </div>
             </div>

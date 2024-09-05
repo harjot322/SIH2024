@@ -1,15 +1,17 @@
 import './retail.css';
+import { Link } from 'react-router-dom';
 const crops = [
-  { name: 'Wheat', quantity: '1000 kg', orderTime: '12 hours', image: 'wheat.jpg' },
-  { name: 'Rice', quantity: '500 kg', orderTime: '24 hours', image: 'rice.jpg' },
-  { name: 'Barley', quantity: '200 kg', orderTime: '6 hours', image: 'barley.jpg' },
-  { name: 'Corn', quantity: '800 kg', orderTime: '18 hours', image: 'corn.jpg' },
-  { name: 'Soybean', quantity: '600 kg', orderTime: '20 hours', image: 'soybean.jpg' },
-  { name: 'Oats', quantity: '400 kg', orderTime: '8 hours', image: 'oats.jpg' },
-  { name: 'Millet', quantity: '300 kg', orderTime: '10 hours', image: 'millet.jpg' },
-  { name: 'Sorghum', quantity: '700 kg', orderTime: '15 hours', image: 'sorghum.jpg' },
-  { name: 'Rye', quantity: '500 kg', orderTime: '22 hours', image: 'rye.jpg' },
+  { name: 'Wheat', quantity: '1000 kg', variety: 'Durum', image: 'wheat.jpg' },
+  { name: 'Rice', quantity: '500 kg', variety: 'Basmati', image: 'rice.jpg' },
+  { name: 'Barley', quantity: '200 kg', variety: 'Malting', image: 'barley.jpg' },
+  { name: 'Corn', quantity: '800 kg', variety: 'Sweet', image: 'corn.jpg' },
+  { name: 'Soybean', quantity: '600 kg', variety: 'Edamame', image: 'soybean.jpg' },
+  { name: 'Oats', quantity: '400 kg', variety: 'Hulless', image: 'oats.jpg' },
+  { name: 'Millet', quantity: '300 kg', variety: 'Pearl', image: 'millet.jpg' },
+  { name: 'Sorghum', quantity: '700 kg', variety: 'Forage', image: 'sorghum.jpg' },
+  { name: 'Rye', quantity: '500 kg', variety: 'Winter', image: 'rye.jpg' },
 ];
+
 
 function Retail() {
   return (
@@ -22,10 +24,12 @@ function Retail() {
         {crops.map((crop, index) => (
           <div className="card" key={index}>
             <img src={crop.image} alt={crop.name} className="card-image" />
-            <h2>{crop.name}</h2>
-            <p>Order Time: {crop.orderTime}</p>
+            <h2 className='cropname'>{crop.name}</h2>
+            <p>Variety of {crop.name}: {crop.variety}</p>
             <div className="card-quantity">
+            {/* <Link to={`/list/1`}> */}
               <button className='buttonUi'>Details</button>
+              {/* </Link> */}
               {/* <input
                 type="number"
                 id={`quantity-${index}`}

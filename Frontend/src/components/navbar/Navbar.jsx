@@ -21,7 +21,7 @@ function Navbar() {
       <div className="left">
         <Link to="/" className="logo">
           <img src="/copylogo.png" alt="" />
-          <span>AgroVision</span>
+          <span>AgroPact</span>
         </Link>
         <Link to="/">Home</Link>
         <Link to="/wiki">AgroWiki</Link>
@@ -39,7 +39,7 @@ function Navbar() {
           <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
           <span>{user.name}</span>
           <Link to="/profile" className="profile">
-            <div className="notification">3</div>
+            <div className="notification">1</div>
             <span>Profile</span>
 
           </Link>

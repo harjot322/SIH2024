@@ -35,11 +35,11 @@ function Ask() {
 				<p>FarmWiki</p>
 			</div>
 			<div className="main-container">
-				{/* <div className="greet">
-					<p>Hello, Farmers</p>
+				<div className="greet">
+					{/* <p>Hello, Farmers</p> */}
 					<p>How can I help you today?</p>
 				</div>
-				<div className="cards">
+				{/* <div className="cards">
 					<div className="card">
 						<p>How to improve my yeild?</p>
 						<img src={assets.compass_icon} alt="" />

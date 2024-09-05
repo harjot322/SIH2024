@@ -1,4 +1,5 @@
 import './Wholesale.css';
+import { Link } from 'react-router-dom';
 
 // Function to generate a random price between min and max
 const getRandomPrice = (min, max) => (Math.random() * (max - min) + min).toFixed(2);
@@ -30,7 +31,9 @@ function Wholesale() {
             <div className="card-price">
               <p>Minimum Price per kg: ₹{crop.price}</p>
             </div>
+            <Link to={`/wholesale/1`}>
             <button className="show-bid-button">Show Bid</button>
+            </Link>
           </div>
         ))}
       </div>

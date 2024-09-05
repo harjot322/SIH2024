@@ -2,6 +2,8 @@ import "./singlePage.scss";
 import Slider from "../../components/slider/Slider";
 import Map from "../../components/map/Map";
 import { singlePostData, userData } from "../../lib/dummydata";
+import { assets } from "../../assets/assets";
+import { useSelector } from "react-redux";
 import { useLoaderData } from "react-router-dom";
 
 function SinglePage() {
@@ -19,10 +21,10 @@ function SinglePage() {
               <div className="post">
                 <h1>{post.title}</h1>
                 <div className="address">
-                  <img src="/pin.png" alt="" />
-                  <span>{post.address}</span>
+                  <img src={assets.message_icon} alt="" />
+                  <span>{post.description}</span>
                 </div>
-                <div className="price">$ {singlePostData.price}</div>
+                <div className="price">₹ {singlePostData.price}</div>
               </div>
               <div className="user">
                 <img src={userData.img} alt="" />
@@ -40,41 +42,41 @@ function SinglePage() {
             <div className="feature">
               <img src="/utility.png" alt="" />
               <div className="featureText">
-                <span>Utilities</span>
-                <p>{post.policy}</p>
+                <span>Quantity</span>
+                <p>{post.quantity} Kg</p>
               </div>
             </div>
             <div className="feature">
               <img src="/pet.png" alt="" />
               <div className="featureText">
-                <span>Animal Prohibition</span>
-                <p>{post.pestControl ? "Pest Control Available" : "Pest Control Not Available"}</p>
+                <span>Delivery Expected</span>
+                <p>{post.deliveryexpected}</p>
               </div>
             </div>
             <div className="feature">
               <img src="/fee.png" alt="" />
               <div className="featureText">
-                <span>Security Deposit</span>
-                <p>{post.price / 2}</p>
+                <span>Budget</span>
+                <p>₹{post.price}</p>
               </div>
             </div>
           </div>
-          <p className="title">Sizes</p>
+          <p className="title">Location</p>
           <div className="sizes">
             <div className="size">
               <img src="/size.png" alt="" />
-              <span>{post.area}</span>
+              <span>{post.city}</span>
             </div>
             <div className="size">
               <img src="/bed.png" alt="" />
-              <span>{post.shelter ? "Shelter" : "No Shelter"}</span>
+              <span>{post.state}</span>
             </div>
             <div className="size">
               <img src="/bath.png" alt="" />
-              <span>{post.electricityAndWaterSupply ? "Good Water Supply" : "No Water Supply"}</span>
+              <span>{post.policy}</span>
             </div>
           </div>
-          <p className="title">Nearby Facilities</p>
+          {/* <p className="title">Facilities</p>
           <div className="listHorizontal">
             <div className="feature">
               <img src="/school.png" alt="" />
@@ -98,7 +100,7 @@ function SinglePage() {
               </div>
             </div>
           </div>
-          <p className="title">Location</p>
+          <p className="title">Location</p> */}
           {/* <div className="mapContainer">
             <Map items={[post]} />
           </div> */}

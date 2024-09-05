@@ -3,10 +3,10 @@ import TypingEffect from './TypingEffect';
 
 const LandingPage = () => {
     const texts = [
-        "Need land to store harvested produce?",
-        "Secure your storage with AgroVision.",
-        "Find the perfect land for your crops.",
-        "For the Farmers by AgroVision!",
+        "Secure your contracts with ease.",
+        "Partner with trusted buyers.",
+        "Guarantee stable income today.",
+        "AgroPact: farming simplified.",
     ];
 
     return (
