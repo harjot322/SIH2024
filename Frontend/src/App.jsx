@@ -25,12 +25,11 @@ import Contact from "./routes/contact/Contact";
 import Retail from "./routes/retail/Retail";
 import Wholesale from "./routes/wholesale/Wholesale";
 import Preorder from "./routes/preorder/Preorder";
-// <<<<<<< HEAD
-// import PdfPage from "./routes/PdfPage/PdfPage";
-// =======
-// import Retailpage from "./routes/retailpage/Retailpage";
-// import Wholesalepage from "./routes/wholesalepage/Wholesalepage";
-// >>>>>>> 239bc383e9af8518dddf48c2dccb91fce9550e55
+
+import PdfPage from "./routes/PdfPage/PdfPage";
+
+import Retailpage from "./routes/retailpage/Retailpage";
+import Wholesalepage from "./routes/wholesalepage/Wholesalepage";
 
 function App() {
 
@@ -95,20 +94,20 @@ function App() {
           path: "/preorder",
           element: <Preorder />,
         },
-//         {
-// <<<<<<< HEAD
-//           path : '/pdf',
-//           element : <PdfPage />
-//         }
-// =======
-//           path: "/retail/:id",
-//           element: <Retailpage />,
-//         },
-//         {
-//           path: "/wholesale/:id",
-//           element: <Wholesalepage />,
-//         },
-// >>>>>>> 239bc383e9af8518dddf48c2dccb91fce9550e55
+        {
+
+          path : '/pdf',
+          element : <PdfPage />,
+        },
+        {
+          path: "/retail/:id",
+          element: <Retailpage />,
+        },
+        {
+          path: "/wholesale/:id",
+          element: <Wholesalepage />,
+        },
+
       ]
     },
   ]);
