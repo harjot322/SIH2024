@@ -77,7 +77,7 @@ function App() {
         },
         {
           path: "/wiki",
-          element: <Wiki />,
+          element: isAuthenticated ?  <Wiki /> : <Navigate to="/login" />,
         },
         {
           path: "/contact",

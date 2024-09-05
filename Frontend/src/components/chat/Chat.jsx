@@ -118,7 +118,7 @@ function Chat() {
 						{!loading && messages.map((item) => (
 							<div className={`charMessage ${item._id == id ? "own" : ""}`} key={item._id}>
 								<p>{item.message}</p>
-								<span>1 hour ago</span>
+								<span></span>
 							</div>
 						))}
 						{isActivePolicy && <Link to="/pdf" className="policy">See Policy</Link>}

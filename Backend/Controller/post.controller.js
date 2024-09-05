@@ -86,6 +86,9 @@ export const getPosts = async (req, res) => {
             if (req.query.maxPrice) query.price.lte = parseInt(req.query.maxPrice);
             
         }
+        if(req.query.user){
+            query.creator = req.query.user;
+        }
 
         // Fetch posts based on the constructed query
         

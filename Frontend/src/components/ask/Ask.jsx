@@ -15,7 +15,7 @@ function Ask() {
 
 		formData.append('promp', promp);
 
-		const response = await fetch('http://localhost:5000/api/ai/', {
+		const response = await fetch('http://localhost:5000/api/ai', {
 			method: 'POST',
 
 			credentials: 'include',
@@ -59,7 +59,7 @@ function Ask() {
 				</div> */}
 				<div className='box'>
 
-					<p className='promp'>{data}</p>
+					<p className='promp'>{data || ""}</p>
 				</div>
 				<div className="main-bottom">
 					<div className="search-box">
