@@ -25,7 +25,7 @@ function Navbar() {
         </Link>
         <Link to="/">Home</Link>
         <Link to="/wiki">AgroWiki</Link>
-        <Link to="">Loans</Link>
+        <Link to="/list">Pre-Order</Link>
         <Link to="/contact">Contact Us</Link>
         
         <div id="google_translate_element">
@@ -37,7 +37,7 @@ function Navbar() {
       <div className="right">
         {user ? (<div className="user">
           <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-          <span>Sehaj Makkar</span>
+          <span>{user.name}</span>
           <Link to="/profile" className="profile">
             <div className="notification">3</div>
             <span>Profile</span>
@@ -62,7 +62,7 @@ function Navbar() {
 
           <Link to="/">Home</Link>
           <Link to="/wiki">AgroWiki</Link>
-          <Link to="">Loan</Link>
+          <Link to="/list">Pre-Order</Link>
           <a href="">Login</a>
           <a href="">Sign UP?</a>
           <Link to="/contact">Contact Us</Link>

@@ -5,7 +5,7 @@ import Authentication from "../Middleware/Authentication.middleware.js";
 
 const router = Router();
 
-router.get('/', Authentication , getPosts);
+router.get('/',  getPosts);
 
 router.get('/:id',Authentication, getPost);
 

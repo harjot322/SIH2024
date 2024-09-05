@@ -50,6 +50,17 @@ export const listPageLoader = async ({ request }) => {
 };
 
 
+export const chatUserLoader = ()=>{
+  return fetch(`http://localhost:5000/api/users`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  }).then(response => response.json());
+}
+
+
 // export const profilePageLoader = async () => {
 //   const postPromise = apiRequest("/users/profilePosts");
 //   const chatPromise = apiRequest("/chats");

@@ -2,9 +2,14 @@ import './profilePage.scss';
 import List from '../../components/list/List'
 import Chat from '../../components/chat/Chat'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 // need to sign in to access this page
 function ProfilePage() {
+
+
+  const user = useSelector(state => state.users.user)
+
   return (
     <div className="profilePage">
       <div className="details">
@@ -22,10 +27,10 @@ function ProfilePage() {
               />
             </span>
             <span>
-              Username: <b>Sehaj Makkar</b>
+              Username: <b>{user.name}</b>
             </span>
             <span>
-              E-mail: <b>agrovision.work@gmail.com</b>
+              E-mail: <b>{user.email}</b>
             </span>
           </div>
           <div className="title">

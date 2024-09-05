@@ -14,12 +14,13 @@ function ListPage() {
         <div className="wrapper">
 
           <Filter />
+          <div className='cardWrapper'>
           {data.posts.map(item => (
             
-
-              <Card key = {item._id} item={item} />
             
-          ))}
+              <Card key = {item._id} item={item} />
+            ))}
+            </div>            
         </div>
       </div>
 

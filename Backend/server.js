@@ -11,7 +11,7 @@ import authRoutes from './Routes/auth.routes.js';
 import messageRoutes from './Routes/messages.routes.js';
 import postRoutes from './Routes/post.routes.js';
 import geminiRoutes from './Routes/gemini.routes.js';
-
+import userRoutes from './Routes/user.routes.js';
 
 const app = express();
 
@@ -36,8 +36,8 @@ app.use('/uploads',express.static(path.join(dirname,'Uploads')));
 app.use('/api/auth',authRoutes);
 app.use('/api/messages',messageRoutes);
 app.use('/api/posts',postRoutes);
-
 app.use('/api/ai' , geminiRoutes )
+app.use('/api/users',userRoutes );
 
 const PORT = process.env.PORT;
 

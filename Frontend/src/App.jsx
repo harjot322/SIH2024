@@ -17,7 +17,7 @@ import ProfilePage from "./routes/profilePage/profilePage";
 import Register from "./routes/register/register";
 import Login from "./routes/login/login";
 import NewPostPage from "./routes/newPostPage/newPostPage";
-import { listPageLoader, singlePageLoader } from "./lib/loaders";
+import { chatUserLoader, listPageLoader, singlePageLoader } from "./lib/loaders.js";
 import Ask from "./components/ask/Ask";
 import Sidebar from "./components/sidebar/Sidebar";
 import Wiki from "./routes/wiki/Wiki";
@@ -49,7 +49,7 @@ function App() {
         },
         {
           path: "/list",
-          element: <ListPage />,
+          element:   <ListPage /> ,
           loader : listPageLoader
 
         },
@@ -60,7 +60,8 @@ function App() {
         },
         {
           path: "/profile",
-          element: isAuthenticated ? <ProfilePage /> : <Navigate to="/login" />
+          element: isAuthenticated ? <ProfilePage /> : <Navigate to="/login" />,
+          loader: chatUserLoader,
         },
         {
           path: "/login",

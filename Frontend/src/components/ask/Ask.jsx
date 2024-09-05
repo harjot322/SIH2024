@@ -66,7 +66,7 @@ function Ask() {
 						<input type="text" placeholder="Enter a Prompt here.." onChange={(e) => setPromp(e.target.value)} value={promp} />
 						<div>
 							<img src={assets.gallery_icon} alt="" />
-							<input type='file' /> <img src={assets.mic_icon} alt="" />
+							<img src={assets.mic_icon} alt="" />
 							<img src={assets.send_icon} alt="" onClick={sendHandler} />
 						</div>
 					</div>

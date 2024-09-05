@@ -6,6 +6,7 @@ const conversationSlice = createSlice({
         messages: [],
         selectedConversation: null,
         getMessageTrigger: false,
+        
     },
     reducers: {
         setConversations: (state, action) => {
@@ -13,6 +14,7 @@ const conversationSlice = createSlice({
         },
         setSelectedConversation: (state, action) => {
             state.selectedConversation = action.payload;
+            
         },
         addMessage: (state, action) => {
             state.messages = [...state.messages, action.payload];
