@@ -1,6 +1,6 @@
 .wiki{
   display: flex;
-  background-color: #1B1B1B;
+  background-color: beige;
 
   .sidebar{
     animation: fadeIn 1s;

@@ -160,7 +160,9 @@ animation: loader 4s infinite linear;
   margin: 10px 0;
   line-height: 1.5;
 }
-
+.textTitle{
+  color: black;
+}
 @keyframes loader{
   0%{
       background-position: -800px 0px;

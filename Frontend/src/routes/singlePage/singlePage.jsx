@@ -9,6 +9,9 @@ import { useLoaderData } from "react-router-dom";
 function SinglePage() {
   const post = useLoaderData().post;
   console.log(post);
+
+
+  const user = useSelector(state => state.users.user)
   
   return (
     <div className="singlePage">
@@ -28,7 +31,7 @@ function SinglePage() {
               </div>
               <div className="user">
                 <img src={userData.img} alt="" />
-                <span>{userData.name}</span>
+                <span>{user.name}</span>
               </div>
             </div>
             <div className="bottom">{post.description}</div>
@@ -64,15 +67,15 @@ function SinglePage() {
           <p className="title">Location</p>
           <div className="sizes">
             <div className="size">
-              <img src="/size.png" alt="" />
+              <img src={assets.compass_icon} alt="" />
               <span>{post.city}</span>
             </div>
             <div className="size">
-              <img src="/bed.png" alt="" />
+              <img src={assets.plus_icon} alt="" />
               <span>{post.state}</span>
             </div>
             <div className="size">
-              <img src="/bath.png" alt="" />
+              <img src={assets.bulb_icon} alt="" />
               <span>{post.policy}</span>
             </div>
           </div>

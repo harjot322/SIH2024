@@ -37,7 +37,7 @@ function Ask() {
 			<div className="main-container">
 				<div className="greet">
 					{/* <p>Hello, Farmers</p> */}
-					<p>How can I help you today?</p>
+					<p className='textTitle'>How can I help you today?</p>
 				</div>
 				{/* <div className="cards">
 					<div className="card">

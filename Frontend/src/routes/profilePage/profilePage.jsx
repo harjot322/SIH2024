@@ -8,6 +8,10 @@ import { useSelector } from 'react-redux';
 function ProfilePage() {
 
 
+
+
+
+
   const user = useSelector(state => state.users.user)
 
   return (
@@ -16,7 +20,7 @@ function ProfilePage() {
         <div className="wrapper">
           <div className="title">
             <h1>User Information</h1>
-            <button>Update Profile</button>
+            {/* <button>Update Profile</button> */}
           </div>
           <div className="info">
             <span>
@@ -39,7 +43,10 @@ function ProfilePage() {
               <button>Create New Post</button>
             </Link>
           </div>
-          {/* <List /> */}
+          <div className='listProfile'>
+
+            {/* <List /> */}
+          </div>
           {/* <div className="title">
             <h1>Saved List</h1>
           </div>

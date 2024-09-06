@@ -33,12 +33,13 @@ function Chat() {
 		if (resp.status === 200) {
 
 			dispatch(setConversations(resp.data.messages));
-			dispatch(setSelectedConversation(reciverId));
+			
 			console.log(resp.data.messages);
 
 			setChat({ ...resp.data.messages });
 
 		}
+		dispatch(setSelectedConversation(reciverId));
 
 
 
@@ -79,7 +80,12 @@ function Chat() {
 			setLoading(false);
 		}
 	}
+	const closeHandler = ()=>{
+		dispatch(setSelectedConversation(null));
+		dispatch(setConversations([]));
 
+
+	}
 
 
 	return (
@@ -112,7 +118,7 @@ function Chat() {
 							/>
 							demo
 						</div>
-						<span className="close" onClick={() => dispatch(setSelectedConversation(null))}>X</span>
+						<span className="close" onClick={closeHandler}>X</span>
 					</div>
 					<div className="center">
 						{!loading && messages.map((item) => (
