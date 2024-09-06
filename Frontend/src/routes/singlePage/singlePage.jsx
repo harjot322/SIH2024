@@ -27,7 +27,7 @@ function SinglePage() {
                   <img src={assets.message_icon} alt="" />
                   <span>{post.description}</span>
                 </div>
-                <div className="price">₹ {singlePostData.price}</div>
+                <div className="price">₹ {post.price}</div>
               </div>
               <div className="user">
                 <img src={userData.img} alt="" />

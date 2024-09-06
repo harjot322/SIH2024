@@ -27,7 +27,7 @@ function useLogin() {
                 
                 localStorage.setItem('user',JSON.stringify(response.userData));
 
-                navigate('/list');
+                navigate('/');
 
             }else{
 

@@ -111,18 +111,18 @@ function NewPostPage() {
 						<div className="item">
 							<label htmlFor="utilities">Contract</label>
 							<select name="policy">
-								<option value="owner">By Agropact</option>
-								<option value="tenant">Self</option>
-								<option value="shared">Shared</option>
+								<option value="By Agropact">By Agropact</option>
+								<option value="Self">Self</option>
+								<option value="Shared">Shared</option>
 							</select>
 						</div>
 
 						<div className="item">
 							<label htmlFor="utilities">Extras</label>
 							<select name="extras">
-								<option value="owner">Pesticides Available</option>
-								<option value="tenant">Transportation</option>
-								<option value="shared">Storage Space</option>
+								<option value="Pesticides Available">Pesticides Available</option>
+								<option value="Transportation">Transportation</option>
+								<option value="Storage Space">Storage Space</option>
 							</select>
 						</div>
 

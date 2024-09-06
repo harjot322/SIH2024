@@ -31,16 +31,16 @@ function HomePage() {
 
                     <div className="boxes">
                         <div className="box">
+                            <h1>100%</h1>
+                            <h2>Secure Contracts</h2>
+                        </div>
+                        <div className="box">
+                            <h1>Available</h1>
+                            <h2>in every language</h2>
+                        </div>
+                        <div className="box">
                             <h1>Anywhere</h1>
-                            <h2>in the world</h2>
-                        </div>
-                        <div className="box">
-                            <h1>50+</h1>
-                            <h2>Warehouses Registered</h2>
-                        </div>
-                        <div className="box">
-                            <h1>100+</h1>
-                            <h2>Properties</h2>
+                            <h2>in India</h2>
                         </div>
                     </div>
 
